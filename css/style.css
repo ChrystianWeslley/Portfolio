@@ -1,0 +1,653 @@
+/*fontes utilizadas e css geral da pagina*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, rgb(39, 0, 65), rgb(25, 0, 65), var(--cor-fundo));
+}
+
+h4{
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    margin: 4px 0 20PX 0;
+    text-transform: uppercase;
+    
+}
+
+/*variaveis de cores*/
+:root{
+    --verde-escuro: #14424b;
+    --verde: #2f9364;
+    --orange: #ff7c37;
+    --degrade-btn: linear-gradient(#fe9611, #ff5c00);
+    --color-p: #a1a1a1;
+    --color-p-2: #adadad;
+    --cor-fundo: #07071f;
+    --direitos: #010114;
+    --cor-fundo-2:rgba(154, 117, 255, 0.185);
+    --white: #FFFFFF;
+    --Torch-Red: #ea384f;
+    --Light-Red: #f28693;
+    --roxo: rgb(132, 0, 255);
+}
+
+/* container reutilizavel*/
+.container{
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+/*padding da section*/
+section{
+    padding: 2.7rem 0;
+    max-height: 80%;
+}
+
+/* css da linha divisoria*/
+.linha-divisoria {
+    border: none;
+    height: 3px;
+    background-color: rgba(154, 117, 255, 0.11); /* Cor da linha */
+    margin: 0;
+}
+
+/* css navbar*/
+.btn-gradient{
+    padding: 10px 25px ;
+    border:none;
+    color: white;
+    cursor: pointer;
+    background-image: var(--degrade-btn);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+.ul {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    position: fixed;
+}
+
+.ul .ul-fundo {
+    padding: 10px 40px;
+    border-radius: 8px;
+    border: solid;
+    border-color: var(--cor-fundo-2);
+}
+
+.ul a {
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--color-p-2);
+}
+
+.ul a:nth-child(n+2){
+    margin: 0 0 0 20px;
+}
+
+.ul a:hover {
+    color: white;
+}
+
+/* menu icone*/
+.menu-icon {
+    display: none;
+    position: relative;
+    z-index: 10;
+    top: 14px; 
+    right: 10px;
+    z-index: 10; 
+    width: 8%; 
+}
+
+/*css main*/
+main .container{
+    display: flex;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-text{
+    width: 60%;
+    color: white;
+    margin-top: 40px;
+}
+
+.main-text h2{
+    font-size: 1.5rem;
+}
+
+.main-text p:nth-child(2){
+    margin-top: 10px;
+    color: var(--roxo);
+    font-weight: 600;
+}
+
+.main-text p:nth-child(3) {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: var(--cor-fundo-2);
+    border-radius: 12px;
+    padding: 10px 20px;
+    line-height: 1.8;
+}
+
+.main-text .bi{
+    margin-right: 14px;
+    width: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.main-text .bi:hover {
+    transform: scale(1.1);
+}
+
+.main-text button {
+    margin-right: 14px;
+    width: 90px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 6px;
+    background-color: white;
+    border: none;
+    transition: transform 0.3s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-text button a{
+    color: rgb(25, 0, 65);
+    font-weight: 800;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-text button:hover {
+    transform: scale(1.08);
+}
+
+.main-img {
+    width: 40%;
+    margin-top: 120px;
+    text-align: center; 
+    position: relative; 
+    animation: float 3s ease-in-out infinite; 
+}
+
+.main-img img {
+    width: 70%;
+    border-radius: 50%;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.main-img:hover img {
+    transform: translateY(-10px);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* section funcao*/
+.funcao{
+    display: flex;
+    margin-top: 0;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.funcao .fundo-funcao{
+    background-color: linear-gradient(to right, rgb(8, 0, 31), var(--cor-fundo));
+    padding: 10px 100px;
+    border-radius: 14px;
+    border: solid;
+    border-color: var(--cor-fundo-2);
+    text-align: center;
+}
+
+.funcao .fundo-funcao h1{
+    color: rgba(154, 117, 255, 0.459);
+    text-align: center;
+}
+
+.funcao .fundo-funcao h1:hover{
+    color: rgba(154, 117, 255, 0.555);
+}
+
+/* css projetos*/
+
+.projetos h1{
+    margin: 10px 0 8px 0;
+    font-size: 18px;
+    color: white;
+}
+
+.projetos .cards{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Cria um grid responsivo com 2 colunas mínimas */
+    gap: 20px; /* Espaçamento entre os cards */
+    justify-items: center; /* Centraliza os itens dentro das células */
+}
+
+.projetos .cards .card-item{
+    width: 100%;
+    text-align: center;
+    padding: 30px 40px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.projetos .cards img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+.projetos .cards img:hover{
+    transform: scale(1.1);
+}
+
+.projetos .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #07071f;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    display: none;
+    z-index: 1000;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    line-height: 2.0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.projetos .modal .fechar-modal {
+    position: absolute;
+    top: 2px;
+    right: 12px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.projetos .cards button{
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--cor-fundo-2);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.projetos .cards button:hover {
+    background-color: rgba(154, 117, 255, 0.466);
+    transform: scale(1.08);
+}
+
+.projetos .modal-content {
+    text-align: center;
+}
+
+.projetos .modal-content img {
+    margin-top: 30px;
+    width: 80%;
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.projetos .modal-content p {
+    text-align: justify;
+    font-weight: 600;
+    margin: 10px 60px 30px 60px;
+    line-height: 2.0;
+}
+
+.projetos .modal-content .btn-ver-projeto {
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--cor-fundo-2);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.projetos .modal.active {
+    display: block;
+}
+
+/* css das tecnologias*/
+
+.tecnologia .tecnologias{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.tecnologia .tecnologias .icons{
+    margin-top: 30px;
+    margin-left: 10px;
+    justify-content: space-between;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 0px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.tecnologia .tecnologias .icons:hover {
+    transform: scale(1.1);
+}
+
+/*css habilidades*/
+.habilidades .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto 30px auto;
+}
+
+.habilidades .box{
+    width: 30%;
+    padding: 30px;
+    background-color: var(--cor-fundo-2);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.habilidades .box:hover{
+    transform: scale(1.1);
+}
+
+.habilidades .box .icons{
+    margin: 0 0;
+    width: 36%;
+    height: 36%;
+}
+.habilidades .box .titulo{
+    margin: 0px 0 10px 0;
+    font-weight: 600;
+    color: white;
+}
+
+.habilidades .box p{
+    color: white;
+    margin-bottom: 20px;
+}
+
+/*css do curriculo*/
+
+.profissional .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto 30px auto;
+    background-color: linear-gradient(to right, rgb(8, 0, 31), var(--cor-fundo));
+}
+
+.profissional .experiencia,
+.profissional .formacao {
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    width: 44%;
+    background-color: linear-gradient(to right, rgb(8, 0, 31), var(--cor-fundo));
+    border: 3px solid var(--cor-fundo-2); 
+    border-radius: 12px;
+    padding: 30px; 
+    box-sizing: border-box;
+}
+
+.profissional .experiencia h1,
+.profissional .formacao h1 {
+    font-size: 16px; 
+    margin: 10px 0 10px 0; 
+    color: white;
+}
+
+.profissional .experiencia h2,
+.profissional .formacao h2 {
+    color: white;
+    font-size: 14px; 
+    margin-top: 5px;
+    text-align: center;
+}
+
+.profissional .experiencia p,
+.profissional .formacao p {
+    text-align: justify;
+    margin: 20px 10px; 
+    color: white; 
+    line-height: 2.0;
+    font-size: 12px;
+}
+
+.profissional .experiencia b,
+.profissional .formacao b {
+    text-align: right;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* css formulario */
+
+.formulario {
+    margin-top: 30px;
+}
+
+.formulario .box-formulario {
+    text-align: center;
+    border-radius: 15px;
+    margin: 0px 10px 80px 10px;
+}
+
+.formulario .box-formulario p {
+    margin: 2px 0px 20px 0px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.formulario .box-formulario input {
+    width: 35%;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 0px 0px 8px 0px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: var(--cor-fundo-2);
+}
+
+.formulario .box-formulario textarea {
+    width: 35%;
+    height: 140px;
+    resize: none;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 0px 0px 8px 0px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: var(--cor-fundo-2);
+}
+
+
+.formulario .box-formulario button {
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    width: 14%;
+    padding: 12px;
+    border-radius: 14px;
+    color: white;
+    background-color: var(--cor-fundo-2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.formulario .box-formulario button:hover {
+    background-color: rgba(154, 117, 255, 0.466);
+    transform: scale(1.02);
+}
+
+/*css footer*/
+
+footer {
+    color: white;
+    background-color: var(--cor-fundo);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-section {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+
+footer .footer-section h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+footer .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .footer-section ul li {
+    margin: 10px 0;
+}
+
+footer .footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-section p {
+    margin-bottom: 20px;
+}
+
+footer .redes-sociais svg {
+    margin-right: 10px;
+    width: 26px;
+    transition: transform 0.3s ease;
+}
+
+footer .redes-sociais svg:hover {
+    transform: scale(1.1);
+}
+
+.direitos{
+    background-color: var(--direitos);
+    text-align: center;
+    padding: 10px;
+}
+
+.direitos p{
+    color: white;
+    font-size: 12px;
+}
+
+/* css whatsapp */
+
+#whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+#whatsapp-icon svg {
+    width: 60px;
+    height: auto;
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+
+#whatsapp-icon svg:hover {
+    transform: scale(1.1); 
+}
+
+.exibir {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translate(0, 20px);
+    transition: opacity 1s, filter 1s, transform 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0, 0);
+}
